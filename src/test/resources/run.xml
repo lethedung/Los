@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Los">
+  <listeners>
+    <listener class-name="commons.MethodListener" />
+<!--    <listener class-name="reportconfig.ReportNGListener" />-->
+<!--    <listener class-name="reportconfig.ExtentTestListener" />-->
+  </listeners>
+
+  <test name="Run On CHROME" parallel="classes" thread-count="1">
+	<parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="losscript.sale.sale.Login"/>
+      <class name="losscript.sale.sale.CreateNewCase"/>
+    </classes>
+  </test>
+</suite>
