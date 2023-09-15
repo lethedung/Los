@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
@@ -30,6 +31,13 @@ public class BaseTest {
         WebDriver driver = getBrowserDriver(browserName, appUrl);
         DriverManager.setDriver(driver);
     }
+
+//    @Parameters({"ie", "appUrl"})
+//    @BeforeClass
+//    public void createDriver(@Optional("ie")String browserName, @Optional("appUrl")String appUrl) {
+//        WebDriver driver = getBrowserDriver(browserName, appUrl);
+//        DriverManager.setDriver(driver);
+//    }
 
 //    @AfterClass
     public static void closeDriver() {
@@ -68,6 +76,11 @@ public class BaseTest {
             case EDGE:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
+
+            case IE:
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
                 break;
 
             default:
@@ -167,6 +180,6 @@ public class BaseTest {
     }
 
     protected String getCurrentDay() {
-        return getCurrentMonth() + "/" + getCurrentDate() + "/" + getCurrentYear();
+        return getCurrentDate() + "/" + getCurrentMonth() + "/" + getCurrentYear();
     }
 }

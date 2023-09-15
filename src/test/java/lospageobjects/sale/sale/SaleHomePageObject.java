@@ -1,10 +1,7 @@
 package lospageobjects.sale.sale;
 
 import commons.BasePage;
-import driver.DriverManager;
 import lospageuis.sale.sale.SaleHomePageUI;
-
-import java.util.Collection;
 
 public class SaleHomePageObject extends BasePage {
 
@@ -16,10 +13,10 @@ public class SaleHomePageObject extends BasePage {
         return getElementText(SaleHomePageUI.ACCOUNT_SALE);
     }
 
-    public void clickToIconCasesStartCase() {
-//        waitForLoadingIconInvisible();
-        sleepInSecond(5);
-        waitForElementClickable(SaleHomePageUI.ICON_CASES_START_CASE);
+    public NewCaseHomePageObject clickToIconCasesStartCase() {
+        waitForAllElementVisible(SaleHomePageUI.CASES_FRAME);
+        switchToFrameIframe(SaleHomePageUI.CASES_FRAME);
         clickToElement(SaleHomePageUI.ICON_CASES_START_CASE);
+        return new NewCaseHomePageObject();
     }
 }
