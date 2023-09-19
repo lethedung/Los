@@ -16,6 +16,7 @@ public class InformationSalePageObject extends BasePage {
     }
 
     public void inputMobilePhone(String mobilePhone) {
+        waitForElementVisible(InformationSalePageUI.MOBILE_PHONE_INPUT);
         scrollToElement(InformationSalePageUI.MOBILE_PHONE_INPUT);
         sendKeyToElement(InformationSalePageUI.MOBILE_PHONE_INPUT, mobilePhone);
     }
@@ -113,7 +114,7 @@ public class InformationSalePageObject extends BasePage {
     }
 
     public void inputPOADocument(String fullFaceIMG, String pOADocument) {
-        waitForContainerLoadingInvisible();
+//        waitForContainerLoadingInvisible();
         uploadImage(BasePageUI.DYNAMIC_INPUT_IMG, fullFaceIMG, pOADocument);
     }
 

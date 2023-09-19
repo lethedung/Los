@@ -10,7 +10,7 @@ public class CustomerIdentificationPageObject extends BasePage {
     }
 
     public void inputFrontIDCart(String frontIDCartIMG, String frontIDCartText) {
-        waitForContainerLoadingInvisible();
+//        waitForContainerLoadingInvisible();
         waitForAllElementVisible(CustomerIdPageUI.OPEN_CASES_FRAME);
         switchToFrameIframe(CustomerIdPageUI.OPEN_CASES_FRAME);
         uploadImage(BasePageUI.DYNAMIC_INPUT_IMG, frontIDCartIMG, frontIDCartText);
