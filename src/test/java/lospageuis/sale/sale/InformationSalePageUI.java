@@ -28,4 +28,5 @@ public class InformationSalePageUI {
     public static final String SERVER_BILL_IMG = "//form[@id='ServiceBill']//p/a";
     public static final String SUBMIT_BUTTON = "//button[@id='form[submitBtn]']";
     public static final String CONTINUE_BUTTON = "//input[@name='btnContinue_1']";
+    public static final String MODAL_FADE = "//div[@class='modal fade pm-modal-global in']";
 }

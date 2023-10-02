@@ -16,67 +16,80 @@ public class InformationSalePageObject extends BasePage {
     }
 
     public void inputMobilePhone(String mobilePhone) {
+        waitForPMModalLoadingInvisible();
         waitForElementVisible(InformationSalePageUI.MOBILE_PHONE_INPUT);
         scrollToElement(InformationSalePageUI.MOBILE_PHONE_INPUT);
         sendKeyToElement(InformationSalePageUI.MOBILE_PHONE_INPUT, mobilePhone);
     }
 
     public void clickMobileOwnerStatus() {
+        waitForElementVisible(InformationSalePageUI.MOBILE_OWNER_STATUS_CHECKBOX);
         scrollToElement(InformationSalePageUI.MOBILE_OWNER_STATUS_CHECKBOX);
         clickToElement(InformationSalePageUI.MOBILE_OWNER_STATUS_CHECKBOX);
     }
 
     public void clickHasSmartPhone() {
+        waitForElementVisible(InformationSalePageUI.HAS_SMART_PHONE_CHECKBOX);
         scrollToElement(InformationSalePageUI.HAS_SMART_PHONE_CHECKBOX);
         clickToElement(InformationSalePageUI.HAS_SMART_PHONE_CHECKBOX);
     }
 
     public void inputTemporaryAddressProvince(String temporaryAddressProvince) {
+        waitForElementVisible(InformationSalePageUI.TEMPORARY_ADDRESS_PROVINCE_INPUT);
         scrollToElement(InformationSalePageUI.TEMPORARY_ADDRESS_PROVINCE_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.TEMPORARY_ADDRESS_PROVINCE_INPUT, temporaryAddressProvince);
     }
 
     public void inputTemporaryAddressDistrict(String temporaryAddressDistrict) {
+        waitForElementVisible(InformationSalePageUI.TEMPORARY_ADDRESS_DISTRICT_INPUT);
         scrollToElement(InformationSalePageUI.TEMPORARY_ADDRESS_DISTRICT_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.TEMPORARY_ADDRESS_DISTRICT_INPUT, temporaryAddressDistrict);
     }
 
     public void inputProductCategory(String productCategory) {
+        waitForElementVisible(InformationSalePageUI.PRODUCT_CATEGORY_INPUT);
         scrollToElement(InformationSalePageUI.PRODUCT_CATEGORY_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.PRODUCT_CATEGORY_INPUT, productCategory);
     }
 
     public void inputSchemeProduct(String schemeProduct) {
+        waitForElementVisible(InformationSalePageUI.SCHEME_PRODUCT_INPUT);
         scrollToElement(InformationSalePageUI.SCHEME_PRODUCT_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.SCHEME_PRODUCT_INPUT, schemeProduct);
     }
 
     public void inputBillType(String billType) {
+        waitForElementVisible(InformationSalePageUI.BILL_TYPE_INPUT);
         scrollToElement(InformationSalePageUI.BILL_TYPE_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.BILL_TYPE_INPUT, billType);
     }
 
     public void inputBillOwner(String billOwner) {
+        waitForElementVisible(InformationSalePageUI.BILL_OWNER_INPUT);
         scrollToElement(InformationSalePageUI.BILL_OWNER_INPUT);
         selectItemInDefaultDropdown(InformationSalePageUI.BILL_OWNER_INPUT, billOwner);
     }
 
     public void inputCustomerCodeBill(String customerCodeBill) {
+        waitForElementVisible(InformationSalePageUI.CUSTOMER_CODE_BILL_INPUT);
         scrollToElement(InformationSalePageUI.CUSTOMER_CODE_BILL_INPUT);
         sendKeyToElement(InformationSalePageUI.CUSTOMER_CODE_BILL_INPUT, customerCodeBill);
     }
 
     public void inputBillAmount1(String billAmount1) {
+        waitForElementVisible(InformationSalePageUI.BILL_AMOUNT1_INPUT);
         scrollToElement(InformationSalePageUI.BILL_AMOUNT1_INPUT);
         sendKeyToElement(InformationSalePageUI.BILL_AMOUNT1_INPUT, billAmount1);
     }
 
     public void inputBillAmount2(String billAmount2) {
+        waitForElementVisible(InformationSalePageUI.BILL_AMOUNT2_INPUT);
         scrollToElement(InformationSalePageUI.BILL_AMOUNT2_INPUT);
         sendKeyToElement(InformationSalePageUI.BILL_AMOUNT2_INPUT, billAmount2);
     }
 
     public void inputBillAmount3(String billAmount3) {
+        waitForElementVisible(InformationSalePageUI.BILL_AMOUNT3_INPUT);
         scrollToElement(InformationSalePageUI.BILL_AMOUNT3_INPUT);
         sendKeyToElement(InformationSalePageUI.BILL_AMOUNT3_INPUT, billAmount3);
     }
@@ -108,8 +121,8 @@ public class InformationSalePageObject extends BasePage {
     }
 
     public void clickCompleteButton() {
-        waitForPMModalLoadingInvisible();
-        scrollToElement(InformationSalePageUI.COMPLETE_BUTTON);
+        waitForElementInvisible(InformationSalePageUI.MODAL_FADE);
+        scrollToBottomPage();
         clickToElement(InformationSalePageUI.COMPLETE_BUTTON);
     }
 
